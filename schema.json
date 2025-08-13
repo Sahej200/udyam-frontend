@@ -1,4 +1,4 @@
- {
+{
   "steps": {
     "step1": {
       "description": "Aadhaar Validation with OTP",
@@ -74,3 +74,4 @@
       ]
     }
   }
+}
