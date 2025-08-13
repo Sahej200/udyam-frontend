@@ -37,11 +37,11 @@ export default function Home() {
     if (activeStep === steps.length - 1) {
       // Submit to backend
       try {
-        const response = await fetch('https://udyam-backend.up.railway.app/api/submit', {
-          method: 'POST',
-          body: JSON.stringify(data),
-          headers: { 'Content-Type': 'application/json' },
-        });
+const response = await fetch('https://udyam-backend-production.up.railway.app/api/submit', {
+  method: 'POST',
+  body: JSON.stringify(data),
+  headers: { 'Content-Type': 'application/json' },
+});
         if (response.ok) {
           alert('Form submitted successfully!');
         } else {
