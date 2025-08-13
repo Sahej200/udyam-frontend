@@ -47,8 +47,10 @@ export default function Home() {
         } else {
           alert('Submission failed. Check backend logs.');
         }
-      } catch (error) {
-        alert('Error submitting form: ' + error.message);
+      } catch (error: unknown) {
+        // Type assertion for error
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+        alert('Error submitting form: ' + errorMessage);
       }
     } else {
       setActiveStep((prev) => prev + 1);
