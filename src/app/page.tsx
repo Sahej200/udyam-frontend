@@ -37,7 +37,7 @@ export default function Home() {
     if (activeStep === steps.length - 1) {
       // Submit to backend
       try {
-        const response = await fetch('http://localhost:3001/api/submit', {
+        const response = await fetch('https://udyam-backend.up.railway.app/api/submit', {
           method: 'POST',
           body: JSON.stringify(data),
           headers: { 'Content-Type': 'application/json' },
