@@ -1,0 +1,80 @@
+{
+  "steps": {
+    "step1": {
+      "description": "Aadhaar Validation with OTP",
+      "fields": [
+        {
+          "label": "Do you have Aadhaar Number?",
+          "type": "radio",
+          "name": "hasAadhaar",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "label": "Aadhaar Number",
+          "type": "text",
+          "name": "aadhaarNumber",
+          "placeholder": "Enter Aadhaar Number",
+          "validations": {
+            "required": true,
+            "pattern": "\\d{12}",
+            "maxlength": 12
+          }
+        },
+        {
+          "label": "Name as per Aadhaar",
+          "type": "text",
+          "name": "name",
+          "placeholder": "Enter Name",
+          "validations": {
+            "required": true
+          }
+        },
+        {
+          "label": "OTP",
+          "type": "text",
+          "name": "otp",
+          "placeholder": "Enter OTP",
+          "validations": {
+            "required": true,
+            "maxlength": 6
+          }
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Get OTP",
+          "action": "sendOTP"
+        },
+        {
+          "text": "Validate OTP",
+          "action": "validateOTP"
+        }
+      ]
+    },
+    "step2": {
+      "description": "PAN Validation",
+      "fields": [
+        {
+          "label": "PAN Number",
+          "type": "text",
+          "name": "panNumber",
+          "placeholder": "Enter PAN Number",
+          "validations": {
+            "required": true,
+            "pattern": "[A-Z]{5}[0-9]{4}[A-Z]{1}",
+            "maxlength": 10
+          }
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Validate PAN",
+          "action": "validatePAN"
+        }
+      ]
+    }
+  }
+}
